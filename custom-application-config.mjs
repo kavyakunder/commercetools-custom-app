@@ -12,8 +12,8 @@ const config = {
       initialProjectKey: 'new-learning-sample-project',
     },
     production: {
-      applicationId: '${env:APPLICATION_ID}',
-      url: 'https://your_app_hostname.com',
+      applicationId: '${env:CUSTOM_APPLICATION_ID}',
+      url: 'https://lucky-twilight-4a9715.netlify.app/',
     },
   },
   oAuthScopes: {
