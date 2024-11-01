@@ -12,7 +12,7 @@ const config = {
       initialProjectKey: 'new-learning-sample-project',
     },
     production: {
-      applicationId: 'TODO',
+      applicationId: '${env:APPLICATION_ID}',
       url: 'https://your_app_hostname.com',
     },
   },
