@@ -7,7 +7,7 @@
     "build": "mc-scripts build",
     "start": "mc-scripts start",
     "compile-html": "mc-scripts compile-html",
-    "compile-html:local": "MC_APP_ENV=development mc-scripts compile-html --transformer @commercetools-frontend/mc-dev-authentication/transformer-local.js",
+    "compile-html:local": "cross-env MC_APP_ENV=development mc-scripts compile-html --transformer @commercetools-frontend/mc-dev-authentication/transformer-local.js",
     "start:prod:local": "npm run compile-html:local && mc-scripts serve",
     "extract-intl": "formatjs extract --format=./intl-formatter.js --out-file=./src/i18n/data/core.json 'src/**/!(*.spec).js'",
     "test": "jest --config jest.test.config.js",
@@ -102,5 +102,7 @@
     "headers-polyfill": "3.2.5",
     "nwsapi": "2.2.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
